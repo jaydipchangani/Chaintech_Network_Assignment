@@ -159,8 +159,8 @@ header .header-container {
 
 }
 .skill-circle {
-    width: 60%;
-    height: 100px;
+    width: 100%;
+    height: 150px;
     border-radius: 50%;
     border: none;
     background: conic-gradient(#ff6a95 0% 97%, #222 97% 80%);
@@ -186,11 +186,25 @@ header .header-container {
     background: linear-gradient(90deg, #ff6a95, #fbc02d);
     padding: 50px;
     text-align: center;
-    border-radius: 10px;
+    margin-top:5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-.testimonial-text {
-    font-size: 18px;
-    margin-bottom: 20px;
+
+.testimonial-card{
+    /*background-color: #cfc7de;*/
+    padding: 2%;
+    width: 70%;
+}
+
+.testimonial-card h3 {
+    font-size: 38px;
+}
+
+.testimonial-card p {
+    font-size: 24px;
+    padding-top: 4%;
 }
 
 /* Contact & Footer */
