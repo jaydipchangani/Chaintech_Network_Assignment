@@ -1,0 +1,288 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f0f0f;
+    color: #fff;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    padding: 20px 0;
+}
+header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+}
+.btn-contact {
+    background-color: #7f3fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+.logoImage{
+    height: 18px;
+}
+
+/* Hero */
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3%;
+}
+.hero-text h1 {
+    font-size: 60px;
+    font-weight: 800;
+}
+.hero-text h2 {
+    font-size: 50px;
+    font-weight: 700;
+    background: linear-gradient(to right, #ff6a95, #fbc02d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.social-icons img {
+    width: 30px;
+    margin-right: 10px;
+}
+.btn-cv {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #222;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    margin: 2%;
+}
+
+/* Stats */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+    background-color: #111;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #8e8d8d;
+}
+.stat-item h1 {
+    font-size: 80px;
+    color: #b6ffb3;
+    display: flex;
+    justify-content: center;
+}
+.stat-item p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #b6ffb3;
+}
+
+.dawn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+/* Portfolio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 15px;
+    margin-top: 20px;
+}
+.portfolio-card {
+    background-color: #111;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #8e8d8d;
+}
+.portfolio-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.portfolio-card h3{
+    padding: 5%;
+}
+.portfolio-card .tags span {
+    font-size: 12px;
+    padding: 4px 8px;
+    color: #784DC7;
+    border-radius: 12px;
+    background-color: #E9DFFC;
+}
+.portfolio-card button{
+    background-color: #292929;
+    color: white;
+    border: none;
+    width: 100%;
+    height: 10%;
+    margin: 10% 0%;
+}
+
+/* Skills */
+.container h2{
+    padding: 2% 0%;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 15px;
+    margin-top: 20px;
+}
+.skill-card {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    border: 1px solid #8e8d8d;
+
+}
+.skill-circle {
+    width: 60%;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    background: conic-gradient(#ff6a95 0% 97%, #222 97% 80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.skill-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2%;
+}
+
+.skill-content h3{
+    padding-bottom: 2%
+}
+
+/* Testimonial */
+.testimonial-container {
+    background: linear-gradient(90deg, #ff6a95, #fbc02d);
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
+.testimonial-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Contact & Footer */
+.contact-container {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    background-color: #7f3fff;
+    border-radius: 10px;
+}
+.contact-container img {
+    width: 100px;
+    margin-right: 20px;
+}
+footer {
+    padding: 20px 0;
+}
+footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .nav-links a {
+    margin: 0 10px;
+}
+
+/* Breakpoints */
+@media (min-width: 480px) {
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    .hero-text h2 {
+        font-size: 26px;
+    }
+    .stat-item h3 {
+        font-size: 24px;
+    }
+}
+
+/* Tablet and above */
+@media (min-width: 768px) {
+    .stats-container {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+    }
+    /* Switch to 2 columns for portfolio and skills */
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop and above */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1000px;
+    }
+    header .nav-links {
+        display: flex;
+    }
+    .hero-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+    }
+    .hero-text h1 {
+        font-size: 50px;
+    }
+    .hero-text h2 {
+        font-size: 40px;
+    }
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Extra large desktop */
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+    }
+    .portfolio-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
