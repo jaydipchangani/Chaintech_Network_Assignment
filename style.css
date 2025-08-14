@@ -431,6 +431,7 @@ footer .nav-links a:hover{ color:#d8c7ff; }
     .stat-item h1{ font-size: 56px; }
     .stat-item p{ font-size: 14px; }
     .dawn{ display:none; }
+    .portfolio-grid .portfolio-card:nth-child(n+5){ display:none; }
     .skills-grid{ gap: 16px; grid-template-columns: 1fr; }
     .skill-card{ align-items: center; gap: 16px; flex-direction: column; }
     .skill-circle{ width: 150px; height: 150px; }
