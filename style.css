@@ -424,6 +424,48 @@ footer .nav-links a {
     }
 }
 
+/* Tablet-specific overrides */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero-image{ display:none; }
+    .hero-text{ width:100%; text-align:center; }
+    .social-icons{ width:100%; justify-content: space-around; }
+    .dawn{ display:none; }
+    .stats-container{ flex-direction: row; gap: 0; justify-content: space-between; text-align: left; }
+    .stat-item{ width: auto; }
+    .portfolio-grid .portfolio-card:nth-child(n+5){ display:none; }
+    .skills-grid{ grid-template-columns: 1fr; }
+    .skill-card{ flex-direction: row; align-items: center; }
+  .hero-text h1{
+    font-size: 15vw;
+}
+    .hero-text h2{
+        font-size: 9vw;
+    }
+    .social-icons img {
+        width: 60px;
+    }
+    .skill-circle{
+        height: 225px;
+    }
+.testimonial-container {
+    margin-top: 15%;
+}
+.testimonial-card {
+    bottom:-3%
+}
+.testimonial-card img {
+    width: 30px;}
+    .testimonial-card p {
+        font-size: 20px;}
+.stat-item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+    }
+    
 @media (min-width: 1024px) {
     .container {
         max-width: 1000px;
