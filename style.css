@@ -207,6 +207,11 @@ header .header-container {
     padding-top: 4%;
 }
 
+.testimonial-card img {
+    width: 50px;
+    margin-top: 4%;
+}
+
 /* Contact & Footer */
 .contact-container {
     display: flex;
@@ -214,6 +219,7 @@ header .header-container {
     padding: 30px;
     background-color: #7f3fff;
     border-radius: 10px;
+    margin-top: 3%;
 }
 .contact-container img {
     width: 100px;
