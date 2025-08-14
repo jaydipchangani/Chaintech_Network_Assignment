@@ -217,7 +217,7 @@ header .header-container {
     position: relative; /* allows absolute positioning for the image */
     display: flex;
     align-items: center;
-    background-color: #a063ff; /* purple */
+    background-color: #A87FF3; /* purple */
     border-radius: 10px;
     margin: 15% auto 5%;
     padding: 1% 2% 1% 17%; /* left padding for image space */
@@ -266,6 +266,7 @@ footer .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 4%;
 }
 footer .nav-links a {
     margin: 0 10px;
