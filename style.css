@@ -447,16 +447,28 @@ footer .nav-links a {
     .skill-circle{
         height: 225px;
     }
+
+    
 .testimonial-container {
-    margin-top: 15%;
+margin-top: 15%;
 }
-.testimonial-card {
-    bottom:-3%
-}
-.testimonial-card img {
-    width: 30px;}
+    .testimonial-card{
+        padding: 0;
+    }
+    .testimonial-card h3 {
+        font-size: 3vh;
+    }
+    
     .testimonial-card p {
-        font-size: 20px;}
+        font-size: 18px;
+        padding-top: 4%;
+    }
+    
+    .testimonial-card img {
+        width: 2vh;
+        margin-top: 5%;
+    }
+
 .stat-item {
             display: flex;
             align-items: center;
@@ -464,6 +476,9 @@ footer .nav-links a {
             justify-content: center;
         }
 
+    }
+    .stat-item h1 {
+        font-size: 65px;
     }
     
 @media (min-width: 1024px) {
