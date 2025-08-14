@@ -9,6 +9,7 @@ body {
     background-color: #0f0f0f;
     color: #fff;
 }
+html { scroll-behavior: smooth; }
 .container {
     width: 90%;
     max-width: 1200px;
@@ -39,14 +40,29 @@ header .header-container {
     margin: 0 15px;
     text-decoration: none;
     color: #fff;
+    position: relative;
 }
+.nav-links a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg,#ff6a95,#fbc02d);
+    transition: width 200ms ease;
+}
+.nav-links a:hover::after{ width: 100%; }
+.nav-links a:hover{ color: #f1f1f1; }
 .btn-contact {
     background-color: #925FF0;
     padding: 1% 2%;
     border-radius: 5px;
     text-decoration: none;
     color: #fff;
+    transition: background-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
 }
+.btn-contact:hover{ background-color:#a77bff; box-shadow:0 8px 20px rgba(146,95,240,.35); transform: translateY(-2px); }
 .logoImage{
     height: 18px;
 }
@@ -104,7 +120,9 @@ header .header-container {
 }
 .social-icons img {
     width: 40px;
+    transition: transform 180ms ease, filter 180ms ease, opacity 180ms ease;
 }
+.social-icons img:hover{ transform: translateY(-3px) scale(1.06); filter: drop-shadow(0 6px 12px rgba(0,0,0,.35)); }
 .btn-cv {
     display: flex;
     align-items: center;
@@ -119,6 +137,8 @@ header .header-container {
     gap: 1%;
     font-size: large;
 }
+.btn-cv{ transition: background-color 200ms ease, box-shadow 200ms ease, transform 200ms ease; }
+.btn-cv:hover{ background-color:#2a2a2a; box-shadow:0 8px 20px rgba(0,0,0,.35); transform: translateY(-2px); }
 
 /* Stats */
 .stats-container {
@@ -163,11 +183,15 @@ header .header-container {
     padding: 15px;
     border-radius: 10px;
     border: 1px solid #8e8d8d;
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
+.portfolio-card:hover{ transform: translateY(-6px); box-shadow:0 14px 30px rgba(0,0,0,.45); border-color:#b89aff; }
 .portfolio-card img {
     width: 100%;
     border-radius: 10px;
+    transition: transform 220ms ease;
 }
+.portfolio-card:hover img{ transform: scale(1.02); }
 
 .portfolio-card h3{
     padding: 5%;
@@ -186,7 +210,9 @@ header .header-container {
     width: 100%;
     height: 10%;
     margin: 10% 0%;
+    transition: background-color 180ms ease, transform 180ms ease;
 }
+.portfolio-card button:hover{ background-color:#353535; transform: translateY(-2px); }
 
 /* Skills */
 .skills-container{
@@ -206,8 +232,10 @@ header .header-container {
     border-radius: 10px;
     display: flex;
     border: 1px solid #8e8d8d;
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 
 }
+.skill-card:hover{ transform: translateY(-4px); box-shadow:0 12px 26px rgba(0,0,0,.4); border-color:#a27bf5; }
 .skill-circle {
     width: 100%;
     height: 150px;
@@ -219,7 +247,10 @@ header .header-container {
     align-items: center;
     font-weight: 700;
     margin-bottom: 10px;
+    box-shadow: inset 0 0 0 8px rgba(255,255,255,.04);
+    transition: box-shadow 220ms ease, transform 220ms ease;
 }
+.skill-card:hover .skill-circle{ box-shadow: inset 0 0 0 8px rgba(255,255,255,.07); transform: scale(1.03); }
 .skill-content{
     display: flex;
     flex-direction: column;
@@ -336,7 +367,11 @@ footer .nav-links a {
     margin: 0 10px;
     text-decoration: none;
     color: white;
+    transition: color 180ms ease;
 }
+footer .nav-links a:hover{ color:#d8c7ff; }
+.logoName{ transition: transform 200ms ease; }
+.logoName:hover{ transform: translateY(-2px); }
 .logoBottom{
     height: 30px;
 }
@@ -437,6 +472,14 @@ footer .nav-links a {
     .skill-card{ flex-direction: row; align-items: center; }
   .hero-text h1{
     font-size: 15vw;
+}
+
+/* Accessibility: improve focus visibility */
+:is(a, button):focus-visible{ outline: 2px dashed #b89aff; outline-offset: 3px; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+    *{ transition: none !important; }
 }
     .hero-text h2{
         font-size: 9vw;
