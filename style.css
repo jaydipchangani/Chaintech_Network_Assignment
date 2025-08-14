@@ -30,8 +30,8 @@ header .header-container {
     color: #fff;
 }
 .btn-contact {
-    background-color: #7f3fff;
-    padding: 10px 20px;
+    background-color: #925FF0;
+    padding: 1% 2%;
     border-radius: 5px;
     text-decoration: none;
     color: #fff;
@@ -126,7 +126,7 @@ header .header-container {
     justify-content: center;
 }
 .stat-item p {
-    font-size: 18px;
+    font-size: 1.5vw;
     margin-top: 10px;
     color: #b6ffb3;
 }
@@ -139,11 +139,13 @@ header .header-container {
 }
 
 /* Portfolio */
+.portfolio-container{
+    margin-top: 5%;
+}
 .portfolio-grid {
     display: grid;
     grid-template-columns: 1fr; /* Single column on mobile */
     gap: 15px;
-    margin-top: 20px;
 }
 .portfolio-card {
     background-color: #111;
@@ -176,14 +178,16 @@ header .header-container {
 }
 
 /* Skills */
+.skills-container{
+    margin-top: 5%;
+}
 .container h2{
     padding: 2% 0%;
 }
 .skills-grid {
     display: grid;
     grid-template-columns: 1fr; /* Single column on mobile */
-    gap: 15px;
-    margin-top: 20px;
+    gap: 1%;
 }
 .skill-card {
     background-color: #111;
