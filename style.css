@@ -238,6 +238,7 @@ header .header-container {
     background-image: url('images/left-wave.svg'), url('images/right-wave.svg'); /* example waves */
     background-repeat: no-repeat, no-repeat;
     background-position: left center, right center;
+    
 }
 
 .contact-image {
@@ -248,6 +249,7 @@ header .header-container {
     width: 15%;
     border-radius: 8px;
      z-index: 10;
+     border-radius: 10px 10px 0px 0px;
 }
 .right-wave{
     position: absolute;
