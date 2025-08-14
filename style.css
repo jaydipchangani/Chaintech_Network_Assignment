@@ -212,19 +212,53 @@ header .header-container {
     margin-top: 4%;
 }
 
-/* Contact & Footer */
+/* Contact Section */
 .contact-container {
+    position: relative; /* allows absolute positioning for the image */
     display: flex;
     align-items: center;
-    padding: 30px;
-    background-color: #7f3fff;
+    background-color: #a063ff; /* purple */
     border-radius: 10px;
-    margin-top: 3%;
+    margin: 15% auto 5%;
+    padding: 1% 2% 1% 17%; /* left padding for image space */
+    width: 90%;
+    min-height: 150px;
+    background-image: url('images/left-wave.svg'), url('images/right-wave.svg'); /* example waves */
+    background-repeat: no-repeat, no-repeat;
+    background-position: left center, right center;
 }
-.contact-container img {
-    width: 100px;
-    margin-right: 20px;
+
+.contact-image {
+    position: absolute;
+    top: 5%;
+    left:3%;
+    transform: translateY(-50%);
+    width: 15%;
+    border-radius: 8px;
+     z-index: 10;
 }
+.right-wave{
+    position: absolute;
+    top: 20%;
+    right: -3.2%;
+    transform: translate(-40%,-40%);
+    width: 8%;
+}
+.left-wave{
+    position: absolute;
+    top: 75%;
+    left: 4%;
+    transform: translate(-50%,-50%);
+    width: 8%;
+    z-index: 1
+}
+.contact-text {
+    color: white;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Footer */
 footer {
     padding: 20px 0;
 }
@@ -235,7 +269,10 @@ footer .footer-container {
 }
 footer .nav-links a {
     margin: 0 10px;
+    text-decoration: none;
+    color: white;
 }
+
 
 /* Breakpoints */
 @media (min-width: 480px) {
