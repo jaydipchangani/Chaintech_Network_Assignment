@@ -24,6 +24,17 @@ header .header-container {
     justify-content: space-between;
     align-items: center;
 }
+.menu-toggle{
+    display: none;
+    width: 32px;
+    height: 24px;
+    background: linear-gradient(currentColor,currentColor) center/100% 3px no-repeat,
+                linear-gradient(currentColor,currentColor) top/100% 3px no-repeat,
+                linear-gradient(currentColor,currentColor) bottom/100% 3px no-repeat;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+}
 .nav-links a {
     margin: 0 15px;
     text-decoration: none;
@@ -68,14 +79,14 @@ header .header-container {
     letter-spacing: 10px !important;
 }
 .hero-text h1 {
- font-size: 9vw !important;
+ font-size: 9vw;
     font-weight: 800;
      letter-spacing: 3px;
      line-height: 1; 
      
 }
 .hero-text h2 {
-    font-size: 5.7vw !important;
+    font-size: 5.7vw;
     font-weight: 700;
     background: linear-gradient(to right, #ff6a95, #fbc02d);
     -webkit-background-clip: text;
@@ -202,7 +213,7 @@ header .header-container {
     height: 150px;
     border-radius: 50%;
     border: none;
-    background: conic-gradient(#ff6a95 0% 97%, #222 97% 80%);
+    background: conic-gradient(#ff6a95 0 350deg, #222 350deg 360deg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -274,7 +285,7 @@ header .header-container {
     padding: 1% 2% 1% 17%; /* left padding for image space */
     width: 90%;
     min-height: 150px;
-    background-image: url('images/left-wave.svg'), url('images/right-wave.svg'); /* example waves */
+    background-image: none;
     background-repeat: no-repeat, no-repeat;
     background-position: left center, right center;
     
@@ -338,7 +349,54 @@ footer .nav-links a {
     gap: 10%;
 }
 
-
+@media (max-width: 767px){
+    header .nav-links{ display:none; }
+    .btn-contact{ display:none; }
+    .menu-toggle{ display:block; }
+    .hero-image{ display:none; }
+    .hero-text{ width:100%; text-align:center; }
+    .social-icons{ width:100%; justify-content: space-between; }
+    .stats-container{ flex-direction: column; gap: 24px; text-align:center; align-items: center; }
+    .stat-item{ width: 100%; }
+    .stat-item h1{ font-size: 56px; }
+    .stat-item p{ font-size: 14px; }
+    .dawn{ display:none; }
+    .skills-grid{ gap: 16px; grid-template-columns: 1fr; }
+    .skill-card{ align-items: center; gap: 16px; flex-direction: column; }
+    .skill-circle{ width: 150px; height: 150px; }
+    .testimonial-container{ overflow: hidden;
+    margin-top: 5%; }
+    footer .footer-container{ flex-direction: column; gap: 12px; }
+    .testimonial-card{
+        padding: 0;
+    }
+    .testimonial-card h3 {
+        font-size: 18px;
+    }
+    
+    .testimonial-card p {
+        font-size: 8px;
+        padding-top: 4%;
+    }
+    
+    .testimonial-card img {
+        width: 10px;
+        margin-top: 5%;
+    }
+    .right-wave {
+        top:6%
+    }
+    .left-wave{
+        top:91%
+    }
+    .hero-text h1 {
+        font-size: 15vw;
+    }
+    .hero-text h2 {
+        font-size: 7.7vw;}
+    
+    
+}
 @media (min-width: 480px) {
     .hero-text h1 {
         font-size: 32px;
@@ -380,11 +438,13 @@ footer .nav-links a {
         text-align: left;
     }
     .hero-text h1 {
-        font-size: 50px;
+        font-size: 9vw;
+        text-align: justify;
+        letter-spacing: 15px;
+        
     }
     .hero-text h2 {
-        font-size: 40px;
-    }
+        font-size: 5.7vw;}
     .portfolio-grid {
         grid-template-columns: repeat(3, 1fr);
     }
